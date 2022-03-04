@@ -1,7 +1,7 @@
 clone_git:
   git.latest:
     - name: https://github.com/yuri-1987/micro_k8s.git
-    - target: /srv/salt/
+    - target: /srv/salt
     - user: root
     - rev: master
     - depth: 1

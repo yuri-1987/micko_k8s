@@ -1,6 +1,6 @@
 minion_conf:
   file.managed:
-    - owner: root
+    - user: root
     - group: root
     - mode: 0640
     - names:

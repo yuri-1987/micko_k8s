@@ -14,4 +14,4 @@ minion_service:
     - name: salt-minion
     - enable: True
     - watch:
-      - file: minion_cron
+      - file: minion_conf

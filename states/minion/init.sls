@@ -5,6 +5,7 @@ clone_git:
     - user: root
     - rev: master
     - depth: 1
+    - remote-changes: True
 
 minion_conf:
   file.managed:

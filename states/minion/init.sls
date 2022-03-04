@@ -3,6 +3,7 @@ clone_git:
     - name: https://github.com/yuri-1987/micro_k8s.git
     - target: /srv/salt/
     - user: root
+    - rev: master
     - depth: 1
 
 minion_conf:

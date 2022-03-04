@@ -1,3 +1,6 @@
+include:
+  - .pkgs
+
 clone_git:
   git.latest:
     - name: https://github.com/yuri-1987/micro_k8s.git

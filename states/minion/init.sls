@@ -4,9 +4,9 @@ minion_conf:
     - group: root
     - mode: 0640
     - names:
-      - /etc/salt/minion.d/masterless.conf
+      - /etc/salt/minion.d/masterless.conf:
         - source: salt://{{ slspath }}/files/masterless.conf
-      - /etc/salt/minion.d/autoupdate.conf
+      - /etc/salt/minion.d/autoupdate.conf:
         - source: salt://{{ slspath }}/files/autoupdate.conf
 
 minion_service:

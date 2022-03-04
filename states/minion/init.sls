@@ -1,3 +1,10 @@
+clone_git:
+  git.latest:
+    - name: https://github.com/yuri-1987/micro_k8s.git
+    - target: /srv/salt/
+    - user: root
+    - depth: 1
+
 minion_conf:
   file.managed:
     - user: root
@@ -7,8 +14,8 @@ minion_conf:
       - /etc/salt/minion.d/masterless.conf:
         - source: salt://{{ slspath }}/files/masterless.conf
 
-minion_service:
-  service.disabled:
+stop_minion_service:
+  service.dead:
     - name: salt-minion
-    - watch:
-      - file: minion_conf
+    - enable: False
+

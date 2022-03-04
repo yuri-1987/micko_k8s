@@ -6,12 +6,9 @@ minion_conf:
     - names:
       - /etc/salt/minion.d/masterless.conf:
         - source: salt://{{ slspath }}/files/masterless.conf
-      - /etc/salt/minion.d/autoupdate.conf:
-        - source: salt://{{ slspath }}/files/autoupdate.conf
 
 minion_service:
-  service.running:
+  service.disabled:
     - name: salt-minion
-    - enable: True
     - watch:
       - file: minion_conf
